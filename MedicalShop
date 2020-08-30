@@ -1,0 +1,34 @@
+pragma solidity 0.4.18 <= 0.6.12;
+
+contract MedicalShop{
+    string customername;
+    int totalprice;
+    string addrscustomer;
+    string medicineName;
+    string companyname;
+
+
+
+function MedicalShop(string newCustomername,int newtotalprice,string newaddrscustomer,string newmedicineName,string newcompanyname)public{
+ 
+    customername=newCustomername;
+    totalprice=newtotalprice;
+    addrscustomer=newaddrscustomer;
+    medicineName=newmedicineName;
+    companyname=newcompanyname;
+   
+    
+}    
+
+function getMedicalShop()public view returns(string,int,string,string,string){
+    
+    return (customername,totalprice,addrscustomer,medicineName,companyname);
+}
+
+function setRestaurentBill(string newmedicineName,string newcompanyname)public{
+    medicineName=newmedicineName;
+    companyname=newcompanyname;
+}
+}
+
+
