@@ -1,0 +1,35 @@
+pragma solidity 0.4.18 <= 0.6.12;
+
+contract RestaurentBill{
+    string customername;
+    int totalprice;
+    string addrscustomer;
+    int BillNo;
+    string totalquantityOfItems;
+    string customerEmail;
+    string companyname;
+
+
+
+function RestaurentBill(string newCustomername,int newtotalprice,string newaddrscustomer,int newBillNo,string newtotalquantityOfItems,string newcustomerEmail,string newcompanyname)public{
+ 
+    customername=newCustomername;
+    totalprice=newtotalprice;
+    addrscustomer=newaddrscustomer;
+    BillNo=newBillNo;
+    totalquantityOfItems=newtotalquantityOfItems;
+    customerEmail=newcustomerEmail;
+    companyname=newcompanyname;
+   
+    
+}    
+
+function getRestaurentBill()public view returns(string,int,string,int,string,string,string){
+    
+    return (customername,totalprice,addrscustomer,BillNo,totalquantityOfItems,customerEmail,companyname);
+}
+
+function setRestaurentBill(int newBillNo)public{
+    BillNo=newBillNo;
+}
+}
